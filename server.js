@@ -12,7 +12,7 @@ const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
 const baseController = require("./controllers/baseController")
-const inventoryRoute = require("./routes/inventoryRoute ") // <-- Added inventory route
+const inventoryRoute = require("./routes/inventoryRoute") // <-- Added inventory route
 
 /* ***********************
  * View Engine and Templates
