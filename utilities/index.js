@@ -25,11 +25,6 @@ Util.getNav = async function (currentUrl) {
   return nav;
 };
 
-
-
-module.exports = Util;
-
-
 /* **************************************
 * Build the classification view HTML
 * ************************************ */
@@ -40,7 +35,7 @@ Util.buildClassificationGrid = async function (data) {
     data.forEach(function (vehicle) {
       grid += '<div class="grid-item">';
       grid +=
-        '<a href="../../inv/detail/' +
+        '<a href="../../detail/' +
         vehicle.inv_id +
         '" title="View ' +
         vehicle.inv_make +
@@ -56,7 +51,7 @@ Util.buildClassificationGrid = async function (data) {
       grid += '<div class="vehicle-info">';
       grid += "<h2>";
       grid +=
-        '<a href="../../inv/detail/' +
+        '<a href="../../detail/' +
         vehicle.inv_id +
         '" title="View ' +
         vehicle.inv_make +
@@ -81,3 +76,23 @@ Util.buildClassificationGrid = async function (data) {
   }
   return grid;
 };
+
+Util.buildDetailPage = async function (data) {
+  if (!data) {
+    return '<p class="notice">Sorry, no details available for this vehicle.</p>';
+  }
+
+  let detailPage = '<div class="vehicle-detail">';
+  detailPage += `<h1>${data.inv_make} ${data.inv_model} (${data.inv_year})</h1>`;
+  detailPage += `<img src="${data.inv_image}" alt="Image of ${data.inv_make} ${data.inv_model}">`;
+  detailPage += `<p class="price"><strong>Price:</strong> $${new Intl.NumberFormat("en-US").format(data.inv_price)}</p>`;
+  detailPage += `<p><strong>Miles:</strong> ${new Intl.NumberFormat("en-US").format(data.inv_miles)}</p>`;
+  detailPage += `<p><strong>Color:</strong> ${data.inv_color}</p>`;
+  detailPage += `<p><strong>Description:</strong> ${data.inv_description}</p>`;
+  detailPage += '</div>';
+
+  return detailPage;
+};
+
+
+module.exports = Util;

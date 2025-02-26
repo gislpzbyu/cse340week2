@@ -400,3 +400,64 @@ body {
   font-weight: bold;
   color: #2a9d8f;
 }
+
+
+
+.vehicle-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.vehicle-detail h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00a3e0;
+  margin-bottom: 15px;
+}
+
+.vehicle-detail img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.vehicle-info {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.vehicle-info p {
+  margin: 8px 0;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+@media (max-width: 768px) {
+  .vehicle-detail {
+    padding: 15px;
+  }
+
+  .vehicle-detail h1 {
+    font-size: 22px;
+  }
+
+  .vehicle-info {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+}
