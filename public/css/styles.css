@@ -461,3 +461,19 @@ body {
     font-size: 20px;
   }
 }
+
+.error-container {
+  padding: 20px;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.error-trigger {
+  padding: 10px 20px;
+}
+
+.error-btn {
+  padding: 10px 20px;
+}
+
