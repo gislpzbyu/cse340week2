@@ -152,7 +152,7 @@ body {
 .hero .car-title {
   font-size: 22px;
   font-weight: bold;
-  color: #00a3e0;
+  color: #000000;
 }
 
 .hero ul {
@@ -475,5 +475,167 @@ body {
 
 .error-btn {
   padding: 10px 20px;
+  color: #000000;
+}
+
+/* NEW ADDED Sessions & Messages*/
+.notice {
+  color: #000000 !important;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.login-container {
+  background-color: #2f4f6f;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 400px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #ddd;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3c6e91;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #2d556d;
+}
+
+.login-container p {
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.login-container a {
+  color: #69b3d0;
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+
+form {
+    background-color: #2b3e50;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #000;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background-color: #f4f4f9;
+    color: #2b3e50;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+    color: #000000;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input:required:invalid {
+  border: 2px solid red;
+}
+
+input:required:valid {
+  border: 2px solid green;
+}
+
+span {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
