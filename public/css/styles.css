@@ -539,7 +539,7 @@ body {
 }
 
 .login-container a {
-  color: #69b3d0;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -559,7 +559,7 @@ form {
 
 h1 {
     margin-bottom: 20px;
-    color: #000;
+    color: #000000;
     text-align: center;
 }
 
