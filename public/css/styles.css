@@ -558,7 +558,7 @@ form {
 
 h1 {
     margin-bottom: 20px;
-    color: #black;
+    color: #000;
     text-align: center;
 }
 
@@ -605,7 +605,7 @@ button:hover {
 p {
     text-align: center;
     margin-top: 10px;
-    color: #black;
+    color: #000;
 }
 
 a {
