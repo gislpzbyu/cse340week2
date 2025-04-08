@@ -34,7 +34,6 @@
 
     <label for="classification_">Clasificación:</label>
     <select id="classification_" name="classification_" required>
-        <option value="" disabled selected>Selecciona una clasificación</option>
         <% classifications.forEach(function(classification) { %>
             <option value="<%= classification.classification_id %>"><%= classification.classification_name %></option>
         <% }); %>

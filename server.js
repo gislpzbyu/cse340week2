@@ -2,7 +2,7 @@
  * This server.js file is the primary file of the 
  * application. It is used to control the project.
  *******************************************/
-require("dotenv").config();
+
 /* ***********************
  * Require Statements
  *************************/
@@ -36,7 +36,7 @@ app.use(
       createTableIfMissing: true,
       pool,
     }),
-    secret: process.env.SESSION_SECRET || "defaultSecretKey",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     name: "sessionId",
