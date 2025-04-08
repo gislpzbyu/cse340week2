@@ -36,7 +36,7 @@ app.use(
       createTableIfMissing: true,
       pool,
     }),
-    secret: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET || 'fallback_secret', // Use fallback if environment variable is missing
     resave: false,
     saveUninitialized: false,
     name: "sessionId",
@@ -93,4 +93,3 @@ const host = process.env.HOST || "localhost";
 app.listen(port, () => {
   console.log(`App listening on ${host}:${port}`);
 });
-
