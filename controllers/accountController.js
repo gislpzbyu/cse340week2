@@ -118,9 +118,6 @@ async function logout(req, res) {
 
 async function buildUpdateAccountView(req, res) {
     let nav = await utilities.getNav();
-
-    // console.log("req", res.locals.accountData.account_id);
-
     const foundAccount = await accountModel.getAccountByEmail(res.locals.accountData.account_email);
 
     res.render("account/update", {
