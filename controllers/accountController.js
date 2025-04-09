@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 require("dotenv").config();
 
 /* ****************************************
- *  Build Login View
+ *  Build Login View DONE
  * *************************************** */
 async function buildLogin(req, res) {
     let nav = await utilities.getNav();
