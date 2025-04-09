@@ -3,17 +3,15 @@ const router = new express.Router();
 const utilities = require("../utilities/");
 const accountController = require("../controllers/accountController");
 
-// Route for the login view (GET)
+router.get("/", utilities.checkLogin, utilities.handleErrors(accountController.buildManagement))
 router.get("/login", accountController.buildLogin);
-
-// Route to process login (POST)
-router.post("/login", utilities.handleErrors(accountController.processLogin));
-
-// Route for the registration view (GET)
+router.post("/login", utilities.handleErrors(accountController.accountLogin));
 router.get("/register", accountController.buildRegister);
-
-// Route to process registration (POST)
 router.post("/register", utilities.handleErrors(accountController.registerAccount));
+// Logout Path
+router.get("/logout", accountController.logout);
+router.get("/update", utilities.checkLogin, accountController.buildUpdateAccountView);
+router.post("/update", utilities.handleErrors(accountController.updateAccount));
 
 // Enhanced error handling middleware
 router.use((err, req, res, next) => {

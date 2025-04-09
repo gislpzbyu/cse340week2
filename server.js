@@ -10,8 +10,10 @@ const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const dotenv = require("dotenv").config();
 const session = require("express-session");
+const cookieParser = require("cookie-parser");
 const pool = require("./database/");
 const accountRoute = require("./routes/accountRoute");
+const utilities = require("./utilities/index");
 
 // Importar rutas y controladores
 const staticRoutes = require("./routes/static");
@@ -28,6 +30,14 @@ const app = express();
 app.use(express.json()); // Procesar JSON
 app.use(express.urlencoded({ extended: true })); // Formularios
 app.use(express.static("public")); // Archivos estáticos (CSS, JS, imágenes)
+app.use(cookieParser());
+app.use(utilities.checkJWTToken);
+app.use((req, res, next) => {
+    if (res.locals.accountData === undefined) {
+        res.locals.accountData = null
+    }
+    next();
+});
 
 // Configuración de sesión
 app.use(
